@@ -13,7 +13,7 @@ const URL = process.env.URL;
 const PORT = process.env.PORT;
 
 const createConnection = async () => {
-  const client = new MongoClient(process.env.URL);
+  const client = new MongoClient(URL);
   await client.connect();
   console.log("MongoDB connected successfully...!");
   return client;
